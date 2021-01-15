@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
-		<!--<ProjectGuid>{C2CECE64-963C-42CE-8ABA-D1E80DC24EB9}</ProjectGuid>-->
+		<ProjectGuid>{C2CECE64-963C-42CE-8ABA-D1E80DC24EB9}</ProjectGuid>
 		<RootNamespace>_12142020_MvcRpsDemo</RootNamespace>
 	</PropertyGroup>
 
