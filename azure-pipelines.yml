@@ -11,6 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  buildPlatform: 'any cpu'
 
 steps:
 - task: SonarCloudPrepare@1
@@ -28,6 +29,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
+  displayName: 'Building Tests'
   inputs:
     command: 'test'
     projects: './12142020_MvcRpsDemo/12142020_MvcRpsDemo.Tests/12142020_MvcRpsDemo.Tests.csproj'
@@ -47,6 +49,7 @@ steps:
     pollingTimeoutSec: '300'
 
 - task: DotNetCoreCLI@2
+  displayName: 'app publish and zip'
   inputs:
     command: 'publish'
     publishWebProjects: true
